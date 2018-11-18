@@ -1,0 +1,187 @@
+.footer{
+	background-color: #425761;
+	box-shadow: 0px 0px 10px #24292e;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+/* Footer left */
+.footer .footer-left{
+	float: left;
+}
+/*logo */
+.footer h3{
+	color:  #ffffff;
+	margin: 0 0 10px;
+}
+
+.footer h3 span{
+	color:  #2abe4f;
+}
+
+/*links */
+.footer .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer .footer-icons{
+	margin-top: 40px;
+}
+
+.footer .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #456a81;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+.footer .footer-right{
+	float: right;
+}
+
+.footer .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* contact form */
+.footer form{
+	display: inline-block;
+}
+
+.footer form input,
+.footer form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer form button{
+	border-radius: 3px;
+	background-color:  #2abe4f;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+	cursor: pointer;
+}
+.footer form button:hover {
+	background-color: #17642a;
+}
+
+/* MEDIA QUERIES, medium devices. Fixes contact form when the width is in between a wider screen and small; without this the form not aligned with the left part of the footer*/
+@media (max-width: 1000px) {
+
+	.footer {
+		font: bold 14px sans-serif;
+	}
+
+	.footer .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer form input,
+	.footer form textarea{
+		width: 250px;
+	}
+
+	.footer form button{
+		padding: 10px 35px;
+	}
+
+}
+/*Small devices*/
+@media (max-width: 800px) {
+
+	.footer{
+		padding: 30px;
+	}
+
+	.footer .footer-left,
+	.footer .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer form{
+		margin-top: 30px;
+	}
+
+	.footer form{
+		display: block;
+	}
+
+	.footer form button{
+		float: none;
+	}
+}
