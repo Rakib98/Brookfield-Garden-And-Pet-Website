@@ -1,13 +1,11 @@
-/*Imports custom font from Google Fonts*/
+/*============================================== This is the main stylesheet. This is used by all the pages================================================*/
+/*IMPORT FONTS FROM GOOGLE FONTS*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Archivo|Merriweather|Open+Sans|Roboto|Ubuntu");
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-/*Style of body*/
+/*STYLE OF THE BODY*/
 body, html {
   background: linear-gradient(0.3turn, #4f7c94, #3b6b8d);
-  background-image: url(../img/BG_test.jpg);
-  background-size: cover;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu" !important;
   margin: 0;
 }
 
@@ -15,23 +13,20 @@ body a, html a {
   text-decoration: none;
 }
 
-/*Header of the page*/
+body p, html p {
+  color: #e0dddd;
+}
+
+/*STYLE OF THE HEADER, SECTION ON THE TOP OF THE PAGE*/
 header {
   padding: 1em;
   position: fixed;
   width: 100%;
-  background: #5684a5;
+  background: #5684A5;
   height: 60px;
   z-index: 2;
   -webkit-box-shadow: 1px 1px 10px;
           box-shadow: 1px 1px 10px;
-  /*.logo {
-        color: white;
-        font-weight: bold;
-        border-bottom: 2px solid white;
-        border-top: 2px solid white;
-
-    }*/
 }
 
 header .menu-btn {
@@ -48,7 +43,7 @@ header #navLogo {
   bottom: 33px;
 }
 
-/*Section with all the actual contents of the website, not including the navigation bar*/
+/*SECTION BETWEEN HEADER AND FOOTER, WHERE ALL CONTENT IS PLACED*/
 section {
   padding-top: 4em;
   width: 100%;
@@ -58,7 +53,7 @@ section {
 section h1 {
   font-size: 3em;
   margin: 1em auto;
-  width: 65%;
+  width: 100%;
   text-align: center;
 }
 
@@ -69,12 +64,12 @@ section h1::before {
 }
 
 section p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
-/*Wrapper inside the section, it wraps around the actual paragraphs, iamges and texts of the website, keeping them centered in the website*/
+/*THE ACTUAL CONTENT IS ALSO WRAPPED IN A WRAPPER DIV, TO ALLOW MORE CUSTOMISATION*/
 #wrapper {
-  width: 90%;
+  width: 94%;
   margin: auto;
 }
 
@@ -85,10 +80,17 @@ section p {
           box-shadow: #3b5164 5px 5px 20px;
 }
 
-/*Full page navigation bar*/
+#wrapper #greeting {
+  font-family: Merriweather;
+  font-size: 40px;
+  text-align: center;
+  font-style: italic;
+}
+
+/*FULL PAGE NAVIGATION MENU*/
 nav {
   position: absolute;
-  /* background: #425761; */
+  /* absolute allows to diplsay the content above all the others*/
   background: linear-gradient(0.8turn, #20394d, #2a4b63);
   padding: 2em;
   width: calc(100%);
@@ -98,9 +100,16 @@ nav {
           transform: scalex(0);
   -webkit-transform-origin: right;
           transform-origin: right;
+  /*Choose from which side of the screen the animation should start*/
   opacity: 0.98;
   z-index: 5;
+  /*Allow to display the page in fron of everything else*/
   margin-bottom: 20px;
+  /*Customise font awesome icons and the menu button*/
+  /*Customise the list for the navigation menu*/
+  /* Change the styling of the links when the user hover on them with the cursor*/
+  /* The page that is currently displayed, will have a different style on the navigation menu, so that the user can easily understand on which page he/she is.*/
+  /*Style for the descrption under the menu's items*/
 }
 
 nav .close-btn, nav i {
@@ -121,6 +130,17 @@ nav ul {
   -ms-grid-columns: (20%)[5];
       grid-template-columns: repeat(5, 20%);
   width: 80%;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav ul li {
+    padding-right: 150px;
+  }
 }
 
 nav a {
@@ -153,6 +173,7 @@ nav li {
 }
 
 nav #dateTime {
+  /*Date and time will be displayed inside the full page navigation menu*/
   border: 2px solid #69e987;
   margin: auto;
   opacity: 0;
@@ -170,35 +191,47 @@ nav #dateTime p {
   opacity: 0;
 }
 
-/*PERSONALISED SCROLLING BAR*/
+/*STYLE OF THE MAP*/
+.mapouter {
+  height: 80%;
+  width: 90%;
+  margin: auto;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/*CUSTOM SCROLLING BAR*/
 ::-webkit-scrollbar {
-  /* width */
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  /* Track */
   background: #234d2d;
 }
 
 ::-webkit-scrollbar-thumb {
-  /* Handle */
   background: #69e987;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  /* Handle on hover */
   background: #42bd5f;
 }
 
-/* Animation of the navigation bar sliding in*/
+/*ANIMATIONS FOR THE FULL PAGE NAVIGATION MENU*/
 .show-menu {
   display: block;
   -webkit-animation: slide-menu 0.90s ease-in forwards;
           animation: slide-menu 0.90s ease-in forwards;
+  /* nth-of-type allows to style single elements, even if they don't have IDs, it works by selecting the number of the element. nth-of-type(1) selects the first item.*/
 }
 
 .show-menu #close-menu {
+  /*sets where the animation should start, and how long it takes*/
   -webkit-animation: show-x 1s 1s forwards;
           animation: show-x 1s 1s forwards;
 }
@@ -248,6 +281,7 @@ nav #dateTime p {
           animation: menu-item-anim 0.6s forwards 1.85s ease-in-out;
 }
 
+/*KEYFRAMES, this is what allows the animation. Creates frames, that will be used as a reference by the animation, to "understand" where to start and end*/
 @-webkit-keyframes slide-menu {
   from {
     -webkit-transform: scaleX(0);
@@ -258,7 +292,6 @@ nav #dateTime p {
             transform: scaleX(1);
   }
 }
-
 @keyframes slide-menu {
   from {
     -webkit-transform: scaleX(0);
@@ -314,14 +347,162 @@ nav #dateTime p {
   }
 }
 
+@-webkit-keyframes animateText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showText {
+  0% {
+    width: 0;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(12%);
+            transform: translateX(12%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes showText {
+  0% {
+    width: 0;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(12%);
+            transform: translateX(12%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+/*ANIMATION OF THE PRODUCTS*/
+section .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  /*Customise the entire image element*/
+}
+
+section .gallery figure {
+  margin: 3px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+  /*Customise just the calption of the image*/
+}
+
+section .gallery figure img {
+  /*Customise just the image*/
+  width: calc(100% + 60px);
+  opacity: .7;
+  -webkit-transform: translate3d(0, -20px, 0) scale(1.12);
+          transform: translate3d(0, -20px, 0) scale(1.12);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+section .gallery figure figcaption {
+  width: 100%;
+  position: absolute;
+  /*padding: 7em 6em;*/
+  top: 20%;
+  left: auto;
+  color: #ffffff;
+  text-align: center;
+}
+
+section .gallery figure figcaption .additional {
+  /*I allos to target a specific link, in this case the last link. It is easier using las-child, as there is no need to create a specific divider*/
+}
+
+section .gallery figure figcaption .additional p {
+  margin-bottom: 20px;
+}
+
+section .gallery figure figcaption .additional a {
+  display: inline-block;
+  background: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5em;
+  font-weight: bold;
+  color: black;
+  border-radius: 4px;
+}
+
+section .gallery figure figcaption .additional a:last-child {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  margin-left: 5px;
+}
+
+section .gallery figure .additional {
+  opacity: 0;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+section .gallery figure:first-child {
+  margin-left: 0;
+}
+
+section .gallery figure:hover img {
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+  opacity: .4;
+}
+
+section .gallery figure:hover .additional {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+section .gallery figure:hover figcaption::before {
+  -webkit-transform: rotateZ(-45deg) translate3d(0, 0, 0);
+          transform: rotateZ(-45deg) translate3d(0, 0, 0);
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 780px) {
+  /*Change to the main styles, like padding and how the content is displayed*/
   header .menu-btn {
     margin-right: 25px;
   }
   nav {
     position: absolute;
-    background: #425761;
+    background: linear-gradient(0.8turn, #20394d, #2a4b63);
     padding: 2em;
     width: calc(100%);
     height: 100%;
@@ -333,6 +514,43 @@ nav #dateTime p {
   }
   nav li {
     margin-bottom: 2em;
+  }
+  .mapouter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  section .gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+  }
+  section .gallery figure {
+    margin: 3px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+  }
+  section .gallery figure img {
+    width: calc(100% + 60px);
+    opacity: .7;
+    -webkit-transform: translate3d(0, -20px, 0) scale(1.12);
+            transform: translate3d(0, -20px, 0) scale(1.12);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  section .gallery figure figcaption {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #ffffff;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 /*# sourceMappingURL=main.css.map */

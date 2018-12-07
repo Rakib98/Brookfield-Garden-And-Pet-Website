@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,25 +11,18 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="style/footer.css">
   <link rel="stylesheet" href="style/login.css">
-  <title>LOGIN: BROOKFIELD GARDEN &amp; PET CENTRE</title>
+  <title>STORE: BROOKFIELD GARDEN &amp; PET CENTRE</title>
   <link rel="icon" href="img/logo_transparent1.png" type="image/png">
-  <!--       _,--._.-,
-      /\_r-,\_ )
-   .-.) _;='_/ (.;
-    \ \'     \/S )
-     L.'-. _.'|-'
-    <_`-'\'_.'/
-      `'-._( \
-       ___   \\,      ___
-       \ .'-. \\   .-'_. /
-        '._' '.\\/.-'_.'
-           '--``\('--'
-                 \\
-                 `\\,
-                   \| -->
+  <!--  
+   ("`-''-/").___..--''"`-._ 
+ `6_ 6  )   `-.  (     ).`-.__.`) 
+ (_Y_.)'  ._   )  `._ `. ``-..-' 
+   _..`--'_..-_/  /--'_.'
+  ((((.-''  ((((.'  (((.-' 
+  -->
 </head>
+<!-- FULL-PAGE NAVIGATION MENU -->
 <nav id="overlay">
-  <!-- FULL-PAGE NAVIGATION MENU -->
   <i class="fas fa-times" id="close-menu"></i>
   <ul>
     <li>
@@ -37,11 +30,11 @@
       <span>Homepage</span>
     </li>
     <li>
-      <a href="login.html" id="current">Login</a>
+      <a href="login.html">Login</a>
       <span>Login and register</span>
     </li>
     <li>
-      <a href="store.html">Store</a>
+      <a href="store.html" id="current">Store</a>
       <span>Our products</span>
     </li>
     <li>
@@ -59,8 +52,8 @@
     <p id="time" style="padding-top : 10px;"></p>
   </div>
 </nav>
+<!-- HEADER OF THE PAGE -->
 <header>
-  <!-- HEADER OF THE PAGE -->
   <a href="index.html"><img src="img/logo_transparent1.png" alt="logo of the website" id="navLogo"></a>
   <img src="img/menu1.png" class="menu-btn" id="open-menu" onclick="topFunction()" class="btn btn-secondary" data-toggle="tooltip"
     data-placement="bottom" title="Open menu">
@@ -69,55 +62,76 @@
 <body>
   <section>
     <div id="wrapper">
-      <!-- CONTENTS OF THE PAGE -->
+      <!-- CONTENT OF THE PAGE -->
       <h1><i class="fas fa-leaf"></i> BROOKFIELD GARDEN &amp; PET CENTRE <i class="fas fa-dog"></i></h1>
-      <h3 style="text-align: center; position:relative; bottom:30px;border-bottom: 5px solid #69e987; width: 38%; margin: auto">LOGIN/REGISTER</h3>
-      <!-- LOGIN BOX -->
-      <div class="login-wrap">
-        <div class="login-html">
-          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
-          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Register</label>
-          <!-- LOGIN FORM -->
-          <div class="login-form">
-            <div class="sign-in-htm">
-              <div class="group">
-                <!-- LOGIN SECTION -->
-                <label for="user" class="label">Username</label>
-                <input id="user" type="text" class="input">
-              </div>
-              <div class="group">
-                <label for="pass" class="label">Password</label>
-                <input id="pass" type="password" class="input" data-type="password">
-              </div>
-              <!-- BUTTON -->
-              <div class="group">
-                <input type="submit" class="button" value="Sign In">
-              </div>
+      <h3 style="text-align: center; position:relative; bottom:30px;border-bottom: 5px solid #69e987; width: 38%; margin: auto">STORE</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos suscipit quo molestiae iure sit, facere quas aliquam
+        sequi debitis possimus ullam laborum soluta quidem quos ea asperiores quia commodi nemo ipsa perferendis non consequatur.
+        Doloribus, voluptas mollitia. Maxime, voluptatum eaque.</p>
+      <!-- Starting to create the products images -->
+      <div class="gallery">
+        <!-- ENTIRE FIUGRE SECTION -->
+        <figure>
+          <img src="img/tool1.jpg" alt="image of tool">
+          <!-- TEXT AND BUTTONS -->
+          <figcaption>
+            <div class="additional">
+              <p>Tool 1</p>
+              <a href="#">Add to basket</a>
+              <a href="#">More Info</a>
             </div>
-            <!-- REGISTER SECTION -->
-            <div class="sign-up-htm">
-              <div class="group">
-                <label for="user" class="label">Username</label>
-                <input id="user" type="text" class="input">
-              </div>
-              <div class="group">
-                <label for="pass" class="label">Password</label>
-                <input id="pass" type="password" class="input" data-type="password">
-              </div>
-              <div class="group">
-                <label for="pass" class="label">Repeat Password</label>
-                <input id="pass" type="password" class="input" data-type="password">
-              </div>
-              <div class="group">
-                <label for="pass" class="label">Email Address</label>
-                <input id="pass" type="email" class="input">
-              </div>
-              <div class="group">
-                <input type="submit" class="button" value="Sign Up">
-              </div>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/tool2.jpg" alt="image of tool">
+          <figcaption>
+            <div class="additional">
+              <p>Tool 2</p>
+              <a href="#">Add to basket</a>
+              <a href="#">More Info</a>
             </div>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/tool3.jpg" alt="image of tool">
+          <figcaption>
+            <div class="additional">
+              <p>Tool 3</p>
+              <a href="#">Add to basket</a>
+              <a href="#">More Info</a>
+            </div>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/tool4.jpg" alt="image of tool">
+          <figcaption>
+            <div class="additional">
+              <p>Tool 4</p>
+              <a href="#">Add to basket</a>
+              <a href="#">More Info</a>
+            </div>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/food1.jpg" alt="image of tool">
+          <figcaption>
+            <div class="additional">
+              <p>Food 1</p>
+              <a href="#">Add to basket</a>
+              <a href="#">More Info</a>
+            </div>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/food2.jpg" alt="image of tool">
+          <figcaption>
+            <div class="additional">
+              <p>Food 2</p>
+              <a href="#">Add to basket</a>
+              <a href="#">More Info</a>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>

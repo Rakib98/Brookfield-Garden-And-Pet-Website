@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="style/main.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-      <link rel="stylesheet" href="style/footer.css">
-      <title>BROOKFIELD GARDEN & PET CENTRE</title>
-      <link rel="icon" href="img/logo_transparent1.png" type="image/png" >
-      <!--
+
+<head>
+    <!-- Import all the stylesheet needed, and sets the viewport to a default zoom, so that the content will adpat to the width of the screen -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Allows compatibility with Internet Explorer -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <title>BROOKFIELD GARDEN &amp; PET CENTRE</title>
+    <link rel="icon" href="img/logo_transparent1.png" type="image/png">
+    <!--
              ____...---...___
 ___.....---"""        .       ""--..____
      .                  .            .
@@ -21,168 +26,161 @@ ___.....---"""        .       ""--..____
             .' -.__.- `.-.-'_.'
  .        .'  /-____-\  `.-'       .
           \  /-.____.-\  /-.
-           \ \`-.__.-'/ /\|\|           .
+           \ \`-.__.-'/ /\|\|       .
           .'  `.    .'  `.
-          |/\/\|    |/\/\|     
+          |/\/\|    |/\/\|
       -->
-   </head>
-   <nav id="overlay">
-      <i class="fas fa-times" id="close-menu"></i>
-      <ul>
-         <li>
-            <a href="index.html"  id="current">Home</a>
+</head>
+<nav id="overlay">
+    <!-- Full page navigation bar. This is normally hidden, it will slide in on click -->
+    <i class="fas fa-times" id="close-menu"></i>
+    <ul>
+        <li>
+            <a href="index.html" id="current">Home</a>
             <span>Homepage</span>
-         </li>
-         <li>
+        </li>
+        <li>
             <a href="login.html">Login</a>
             <span>Login and register</span>
-         </li>
-         <li>
+        </li>
+        <li>
             <a href="store.html">Store</a>
             <span>Our products</span>
-         </li>
-         <li>
+        </li>
+        <li>
             <a href="gallery.html">Gallery</a>
             <span>Our images</span>
-         </li>
-         <li>
+        </li>
+        <li>
             <a href="info.html">Info</a>
             <span>Contact us and Help</span>
-         </li>
-      </ul>
-
-      <div id="dateTime">
+        </li>
+    </ul>
+    <!-- Creates div for date and time, this will be used by JavaScript to show the current date and time -->
+    <div id="dateTime">
         <p id="text">Current date and time</p>
         <p id="date" style="margin-top: 30px"></p>
         <p id="time" style="padding-top : 10px;"></p>
     </div>
-      
-   </nav>
+</nav>
 
-   <header>
-      <!--<a href="index.html" class="logo"><i class="fas fa-cat"></i> BROOKFIELD GARDEN &amp; PET CENTER <i class="fas fa-dog"></i></a>-->
-      <a href="index.html"><img src="img/logo_transparent1.png" alt="logo of the website" id="navLogo"></a>
-      <img src="img/menu1.png" class="menu-btn" id="open-menu" onclick="topFunction()">
-   </header>
+<header>
+    <!-- Header of the website. This is the part that shows on the top, with the logo on the left and the menu icon on the right -->
+    <a href="index.html"><img src="img/logo_transparent1.png" alt="logo of the website" id="navLogo"></a>
+    <img src="img/menu1.png" class="menu-btn" id="open-menu" onclick="topFunction()" class="btn btn-secondary" data-toggle="tooltip"
+        data-placement="bottom" title="Open menu">
+</header>
 
-   <body>
-      <section>
-         <div id="wrapper">
+<body>
+    <section>
+        <!-- Section that will contain the whole website, section is an HTML5 tag it will allow more styling options in CSS -->
+        <div id="wrapper">
+            <!-- The wrapper will contain most of the contennt in the website. This is the index page, it works as the homepage for the website.
+         It has a slideshow, and the random generated greetings with JavaScript -->
             <h1><i class="fas fa-leaf"></i> BROOKFIELD GARDEN &amp; PET CENTRE <i class="fas fa-dog"></i></h1>
             <h3 style="text-align: center; position:relative; bottom:30px;border-bottom: 5px solid #69e987; width: 38%; margin: auto">Services for all your garden and pet needs</h3>
-
+            <!-- Start of the slideshow -->
             <div id="slideshow" class="carousel slide" data-ride="carousel" style="z-index : 1;">
-               <ol class="carousel-indicators">
-                  <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-                  <li data-target="#slideshow" data-slide-to="1"></li>
-                  <li data-target="#slideshow" data-slide-to="2"></li>
-                  <li data-target="#slideshow" data-slide-to="3"></li>
-                  <li data-target="#slideshow" data-slide-to="4"></li>
-                  <li data-target="#slideshow" data-slide-to="5"></li>
-                  <li data-target="#slideshow" data-slide-to="6"></li>
-                  <li data-target="#slideshow" data-slide-to="7"></li>
-                  <li data-target="#slideshow" data-slide-to="8"></li>
-               </ol>
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <img class="d-block w-100" src="img/004.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/001.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/002.jpg" alt="Third slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/005.jpg" alt="Fourth slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/006.jpg" alt="Fifth slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/007.jpg" alt="Fifth slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/008.jpg" alt="Fifth slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/009.jpg" alt="Fifth slide">
-                  </div>
-                  <div class="carousel-item">
-                     <img class="d-block w-100" src="img/010.jpg" alt="Fifth slide">
-                  </div>
-               </div>
-               <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+                <ol class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"></li>
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                    <li data-target="#slideshow" data-slide-to="4"></li>
+                    <li data-target="#slideshow" data-slide-to="5"></li>
+                    <li data-target="#slideshow" data-slide-to="6"></li>
+                    <li data-target="#slideshow" data-slide-to="7"></li>
+                    <li data-target="#slideshow" data-slide-to="8"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/004.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/001.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/002.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/005.jpg" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/006.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/007.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/008.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/009.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/010.jpg" alt="Fifth slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               </a>
-               <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+            </a>
+                <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               </a>
+            </a>
             </div>
+            <!-- Text of the website -->
             <h1>Introduction</h1>
-            <p>The Brookfield garden and pet centre has been a family run business since 2015 and has grown in that time to five times its original size with warehousing nearby.
-                  As a result of its continuous expansion, the Pet Centre is able to offer a vast range of products and regular competitive promotional offers.
-                  Great emphasis is always given to the proper care of pets with expert veterinary advice and guidance through our widely experienced staff.
-                  The Brookfield Centre also enjoys a tremendous reputation for supplying the proper top quality goods for your pet and garden.</p>
-      </section>
-
-      <footer class="footer">
-            <div class="footer-left">
-               <h3>Brookfield <span>Garden and Pet Centre</span></h3>
-               <p class="footer-links">
-                  <a href="index.html">Home</a>
-                  ·
-                  <a href="login.html">Login</a>
-                  ·
-                  <a href="store.html">Store</a>
-                  ·
-                  <a href="gallery.html">Gallery</a>
-                  ·
-                  <a href="info.html">Info</a>
-               </p>
-               <p class="footer-company-name">Rakib Abdur &copy; 2018</p>
-               <div class="footer-icons">
-                  <a href="#"><i class="fab fa-facebook-square"></i></a>
-                  <a href="#"><i class="fab fa-twitter-square"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-               </div>
+            <p>The Brookfield garden and pet centre has been a family run business since 2015 and has grown in that time to
+                five times its original size with warehousing nearby. As a result of its continuous expansion, the Pet Centre
+                is able to offer a vast range of products and regular competitive promotional offers. Great emphasis is always
+                given to the proper care of pets with expert veterinary advice and guidance through our widely experienced
+                staff. The Brookfield Centre also enjoys a tremendous reputation for supplying the proper top quality goods
+                for your pet and garden.</p>
+            <!-- Randomly generated greetings -->
+            <h1>Quotes</h1>
+            <p id="greeting"></p>
+        </div>
+    </section>
+    <!-- Start of footer, the footer aslo function as a contact form, and it has also social media links -->
+    <footer class="footer">
+        <div class="footer-left">
+            <h3>Brookfield <span>Garden and Pet Centre</span></h3>
+            <!-- Sitemap -->
+            <p class="footer-links">
+                <a href="index.html">Home</a> ·
+                <a href="login.html">Login</a> ·
+                <a href="store.html">Store</a> ·
+                <a href="gallery.html">Gallery</a> ·
+                <a href="info.html">Info</a>
+            </p>
+            <p class="footer-company-name">Rakib Abdur &copy; 2018</p>
+            <!-- Social media icons with Font Awesome -->
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook-square"  class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"  class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"  class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Instagram"></i></a>
             </div>
-            <div class="footer-right">
-               <p>Contact Us</p>
-               <form action="#" method="post">
-                  <input type="text" name="email" placeholder="Email" />
-                  <textarea name="message" placeholder="Message"></textarea>
-                  <button>Send</button>
-               </form>
-            </div>
-         </footer>
-         
-      <!-- jQuery -->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-      <!--BOOTSTRAP-->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <!--CUSTOM SCRIPTS-->
-      <script src="https://github.com/Rakib98/Brookfield-Website/blob/master/script/script.js"></script>
-      <script> 
-         //Directs user to the top when the menu button is clicked, so that the full page navigation bar is visible.
-         function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            }
-      </script>
-      <script>
-          //FULL SCREEN NAVIGATION BAR
-           var overlay = document.getElementById('overlay');
-           var closeMenu = document.getElementById('close-menu');
-           
-           document.getElementById('open-menu').addEventListener('click', function() {
-               overlay.classList.add('show-menu');
-           });
-           
-           document.getElementById('close-menu').addEventListener('click', function() {
-               overlay.classList.remove('show-menu');
-           });
-       </script>
-   </body>
+            <br>
+            <p onclick="help()" style="cursor:pointer; text-decoration: underline; color:#69e987">Need help?</p>
+        </div>
+        <div class="footer-right">
+            <p>Contact Us</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Email" />
+                <textarea name="message" placeholder="Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </footer>
+    <!-- IMPORT SCRIPTS -->
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!--CUSTOM SCRIPTS-->
+    <script src="script/script.js"></script>
+</body>
 </html>

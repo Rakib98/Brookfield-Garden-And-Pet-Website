@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="style/main.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-      <link rel="stylesheet" href="style/footer.css">
-      <link rel="stylesheet" href="style/login.css">
-      <title>GALLERY: BROOKFIELD GARDEN & PET CENTRE</title>
-      <link rel="icon" href="img/logo_transparent1.png" type="image/png" >
-      <!-- STYLE FOR THE GALLERY -->
-      <style>
-         * {
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- IMPORT STYLES AND FONT AWESOME -->
+   <link rel="stylesheet" href="style/main.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous">
+   <link rel="stylesheet" href="style/footer.css">
+   <!--<link rel="stylesheet" href="style/login.css">-->
+   <title>GALLERY: BROOKFIELD GARDEN &amp; PET CENTRE</title>
+   <link rel="icon" href="img/logo_transparent1.png" type="image/png">
+   <!-- wWWWw               wWWWw
+      vVVVv (___) wWWWw         (___)  vVVVv
+      (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
+       ~Y~   \|    ~Y~   (___)    |/    ~Y~
+       \|   \ |/   \| /  \~Y~/   \|    \ |/
+      \\|// \\|// \\|/// \\|//  \\|// \\\|///
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+   <!-- STYLE FOR THE GALLERY -->
+   <style>
+      * {
              box-sizing: border-box;
          }
          .row {
@@ -53,133 +63,130 @@
              }
          }
          </style>
-   </head>
-   <nav id="overlay">
-      <i class="fas fa-times" id="close-menu"></i>
-      <ul>
-         <li>
-            <a href="index.html" >Home</a>
-            <span>Homepage</span>
-         </li>
-         <li>
-            <a href="login.html">Login</a>
-            <span>Login and register</span>
-         </li>
-         <li>
-            <a href="store.html">Store</a>
-            <span>Our products</span>
-         </li>
-         <li>
-            <a href="gallery.html" id="current">Gallery</a>
-            <span>Our images</span>
-         </li>
-         <li>
-            <a href="info.html">Info</a>
-            <span>Contact us and Help</span>
-         </li>
-      </ul>
-      <div id="dateTime">
-         <p id="text">Current date and time</p>
-         <p id="date" style="margin-top: 30px"></p>
-         <p id="time" style="padding-top : 10px;"></p>
-      </div>
-   </nav>
-   <header>
-      <a href="index.html"><img src="img/logo_transparent1.png" alt="logo of the website" id="navLogo"></a>
-      <img src="img/menu1.png" class="menu-btn" id="open-menu" onclick="topFunction()">
-   </header>
-   <body>
-      <section>
-         <div id="wrapper">
-            <h1><i class="fas fa-leaf"></i> BROOKFIELD GARDEN &amp; PET CENTRE <i class="fas fa-dog"></i></h1>
-            <h3 style="text-align: center; position:relative; bottom:30px;border-bottom: 5px solid #69e987; width: 38%; margin: auto">GALLERY</h3>
-            <div class="row"> 
-               <div class="column">
-                 <img src="img/001.jpg" style="width:100%">
-                 <img src="img/002.jpg" style="width:100%">
-                 <img src="img/004.jpg" style="width:100%">
-                 <img src="img/005.jpg" style="width:100%">
-                 <img src="img/006.jpg" style="width:100%">
-               </div>
-               <div class="column">
-                  <img src="img/007.jpg" style="width:100%">
-                  <img src="img/008.jpg" style="width:100%">
-                  <img src="img/009.jpg" style="width:100%">
-                  <img src="img/010.jpg" style="width:100%">
-                  <img src="img/011.jpg" style="width:100%">
-               </div>  
-               <div class="column">
-                  <img src="img/012.jpg" style="width:100%">
-                  <img src="img/013.jpg" style="width:100%">
-                  <img src="img/014.jpg" style="width:100%">
-                  <img src="img/015.jpg" style="width:100%">
-                  <img src="img/016.jpg" style="width:100%">
-               </div>
-               <div class="column">
-                  <img src="img/017.jpg" style="width:100%">
-                  <img src="img/018.jpg" style="width:100%">
-                  <img src="img/019.jpg" style="width:100%">
-                  <img src="img/020.jpg" style="width:100%">
-                  <img src="img/021.jpg" style="width:100%">
-               </div>
-             </div>
-      </section>
-      <footer class="footer">
-         <div class="footer-left">
-            <h3>Brookfield <span>Garden and Pet Centre</span></h3>
-            <p class="footer-links">
-               <a href="index.html">Home</a>
-               ·
-               <a href="login.html">Login</a>
-               ·
-               <a href="store.html">Store</a>
-               ·
-               <a href="gallery.html">Gallery</a>
-               ·
-               <a href="info.html">Info</a>
-            </p>
-            <p class="footer-company-name">Rakib Abdur &copy; 2018</p>
-            <div class="footer-icons">
-               <a href="#"><i class="fab fa-facebook-square"></i></a>
-               <a href="#"><i class="fab fa-twitter-square"></i></a>
-               <a href="#"><i class="fab fa-instagram"></i></a>
+</head>
+<!-- FULL-PAGE NAVIGATION MENU -->
+<nav id="overlay">
+   <i class="fas fa-times" id="close-menu"></i>
+   <ul>
+      <li>
+         <a href="index.html">Home</a>
+         <span>Homepage</span>
+      </li>
+      <li>
+         <a href="login.html">Login</a>
+         <span>Login and register</span>
+      </li>
+      <li>
+         <a href="store.html">Store</a>
+         <span>Our products</span>
+      </li>
+      <li>
+         <a href="gallery.html" id="current">Gallery</a>
+         <span>Our images</span>
+      </li>
+      <li>
+         <a href="info.html">Info</a>
+         <span>Contact us and Help</span>
+      </li>
+   </ul>
+   <div id="dateTime">
+      <p id="text">Current date and time</p>
+      <p id="date" style="margin-top: 30px"></p>
+      <p id="time" style="padding-top : 10px;"></p>
+   </div>
+</nav>
+<header>
+   <!-- HEADER OF THE PAGE -->
+   <a href="index.html"><img src="img/logo_transparent1.png" alt="logo of the website" id="navLogo"></a>
+   <img src="img/menu1.png" class="menu-btn" id="open-menu" onclick="topFunction()" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Open menu">
+</header>
+
+<body>
+   <section>
+      <div id="wrapper">
+         <!-- CONTENT OF THE PAGE -->
+         <h1><i class="fas fa-leaf"></i> BROOKFIELD GARDEN &amp; PET CENTRE <i class="fas fa-dog"></i></h1>
+         <h3 style="text-align: center; position:relative; bottom:30px;border-bottom: 5px solid #69e987; width: 38%; margin: auto">GALLERY</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quaerat ullam est accusamus atque veniam
+            eum dicta non magni consequatur cum ex quibusdam impedit suscipit commodi ab, vitae iste quasi culpa? Nobis
+            consequuntur unde, iste, voluptatibus eaque quas ipsum, perspiciatis tempore pariatur minus non expedita
+            totam qui quis! Aliquam, quaerat!</p>
+         <!-- GALLERY -->
+         <div class="row">
+            <div class="column">
+               <img src="img/001.jpg" style="width:100%">
+               <img src="img/002.jpg" style="width:100%">
+               <img src="img/004.jpg" style="width:100%">
+               <img src="img/005.jpg" style="width:100%">
+               <img src="img/006.jpg" style="width:100%">
+            </div>
+            <div class="column">
+               <img src="img/007.jpg" style="width:100%">
+               <img src="img/008.jpg" style="width:100%">
+               <img src="img/009.jpg" style="width:100%">
+               <img src="img/010.jpg" style="width:100%">
+               <img src="img/011.jpg" style="width:100%">
+            </div>
+            <div class="column">
+               <img src="img/012.jpg" style="width:100%">
+               <img src="img/013.jpg" style="width:100%">
+               <img src="img/014.jpg" style="width:100%">
+               <img src="img/015.jpg" style="width:100%">
+               <img src="img/016.jpg" style="width:100%">
+            </div>
+            <div class="column">
+               <img src="img/017.jpg" style="width:100%">
+               <img src="img/018.jpg" style="width:100%">
+               <img src="img/019.jpg" style="width:100%">
+               <img src="img/020.jpg" style="width:100%">
+               <img src="img/021.jpg" style="width:100%">
             </div>
          </div>
-         <div class="footer-right">
-            <p>Contact Us</p>
-            <form action="#" method="post">
-               <input type="text" name="email" placeholder="Email" />
-               <textarea name="message" placeholder="Message"></textarea>
-               <button>Send</button>
-            </form>
+      </div>
+   </section>
+   <!-- FOOTER -->
+   <footer class="footer">
+      <div class="footer-left">
+         <h3>Brookfield <span>Garden and Pet Centre</span></h3>
+         <p class="footer-links">
+            <a href="index.html">Home</a>
+            ·
+            <a href="login.html">Login</a>
+            ·
+            <a href="store.html">Store</a>
+            ·
+            <a href="gallery.html">Gallery</a>
+            ·
+            <a href="info.html">Info</a>
+         </p>
+         <p class="footer-company-name">Rakib Abdur &copy; 2018</p>
+         <div class="footer-icons">
+            <a href="#"><i class="fab fa-facebook-square"  class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"  class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"  class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Instagram"></i></a>
          </div>
-      </footer>
-      <!-- jQuery -->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-      <!--BOOTSTRAP-->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <!--CUSTOM SCRIPTS-->
-      <script src="script/script.js"></script>
-      <script> 
-         //Directs user to the top when the menu button is clicked, so that the full page navigation bar is visible.
-         function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            }
-      </script>
-      <script>
-         //FULL SCREEN NAVIGATION BAR
-          var overlay = document.getElementById('overlay');
-          var closeMenu = document.getElementById('close-menu');
-          
-          document.getElementById('open-menu').addEventListener('click', function() {
-              overlay.classList.add('show-menu');
-          });
-          
-          document.getElementById('close-menu').addEventListener('click', function() {
-              overlay.classList.remove('show-menu');
-          });
-      </script>
-   </body>
+         <br>
+         <p onclick="help()" style="cursor:pointer; text-decoration: underline; color:#69e987">Need help?</p>
+      </div>
+      <div class="footer-right">
+         <p>Contact Us</p>
+         <form action="#" method="post">
+            <input type="text" name="email" placeholder="Email" />
+            <textarea name="message" placeholder="Message"></textarea>
+            <button>Send</button>
+         </form>
+      </div>
+   </footer>
+   <!-- IMPORT SCRIPTS -->
+   <!-- jQuery -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <!--BOOTSTRAP-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+   <!--CUSTOM SCRIPTS-->
+   <script src="script/script.js"></script>
+</body>
+
 </html>

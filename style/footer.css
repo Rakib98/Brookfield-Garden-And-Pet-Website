@@ -1,5 +1,6 @@
+/*General style for the footer*/
 .footer{
-	background-color: #425761;
+	background-color: #2c3c47;
 	box-shadow: 0px 0px 10px #24292e;
 	box-sizing: border-box;
 	width: 100%;
@@ -44,18 +45,17 @@
 	margin: 0;
 }
 
-/* Footer social icons */
-
+/* Footer icon for social media */
 .footer .footer-icons{
 	margin-top: 40px;
 }
-
+/* style for the icon and links*/
 .footer .footer-icons a{
 	display: inline-block;
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #456a81;
+	background-color:  #425968;
 	border-radius: 5px;
 	font-size: 20px;
 	color: #ffffff;
@@ -63,6 +63,11 @@
 	line-height: 35px;
 	margin-right: 3px;
 	margin-bottom: 5px;
+	box-shadow: #293135 1px 1px 2px;
+}
+
+.footer-icons a:hover {
+	background-color: #293c47;
 }
 
 /* Footer Right */
@@ -134,7 +139,8 @@
 	background-color: #17642a;
 }
 
-/* MEDIA QUERIES, medium devices. Fixes contact form when the width is in between a wider screen and small; without this the form not aligned with the left part of the footer*/
+/* MEDIA QUERIES, medium devices. Fixes contact form when the width is in between a wider screen and small;
+ without this the form not aligned with the left part of the footer*/
 @media (max-width: 1000px) {
 
 	.footer {
@@ -156,7 +162,7 @@
 
 }
 /*Small devices*/
-@media (max-width: 800px) {
+@media (max-width: 1090px) {
 
 	.footer{
 		padding: 30px;
